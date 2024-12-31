@@ -1,0 +1,1298 @@
+<html>
+<head>
+<title>TestNG:  Regression Testing 1.0</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Regression Testing 1.0</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>85/1/8</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Dec 24 18:38:31 PKT 2024</td>
+</tr>
+<tr><td>Total time:</td><td>1444 seconds (1444509 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingInhalerTestcases.setup()'><b>setup</b><br>Test class: co.ai4lyf.Testcases.OnBoardingInhalerTestcases</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at co.Ai4Lyf.Objects.WelcomeScreenObjects.ClickContinueBtn(WelcomeScreenObjects.java:60)
+	at co.ai4lyf.Testcases.OnBoardingInhalerTestcases.setup(OnBoardingInhalerTestcases.java:36)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1109966680", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1109966680'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at co.Ai4Lyf.Objects.WelcomeScreenObjects.ClickContinueBtn(WelcomeScreenObjects.java:60)
+	at co.ai4lyf.Testcases.OnBoardingInhalerTestcases.setup(OnBoardingInhalerTestcases.java:36)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>31</td>
+<td>co.ai4lyf.Testcases.OnBoardingInhalerTestcases@367ffa75</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingMedLogTestcases.setup()'><b>setup</b><br>Test class: co.ai4lyf.Testcases.OnBoardingMedLogTestcases</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at co.Ai4Lyf.Objects.WelcomeScreenObjects.ClickContinueBtn(WelcomeScreenObjects.java:60)
+	at co.ai4lyf.Testcases.OnBoardingMedLogTestcases.setup(OnBoardingMedLogTestcases.java:43)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1816986148", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1816986148'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at co.Ai4Lyf.Objects.WelcomeScreenObjects.ClickContinueBtn(WelcomeScreenObjects.java:60)
+	at co.ai4lyf.Testcases.OnBoardingMedLogTestcases.setup(OnBoardingMedLogTestcases.java:43)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>39</td>
+<td>co.ai4lyf.Testcases.OnBoardingMedLogTestcases@55fe41ea</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingInhalerTestcases.setup()'><b>setup</b><br>Test class: co.ai4lyf.Testcases.OnBoardingInhalerTestcases</td>
+<td></td>
+<td>-1735047753</td>
+<td>co.ai4lyf.Testcases.OnBoardingInhalerTestcases@367ffa75</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingInhalerTestcases.setup()'><b>setup</b><br>Test class: co.ai4lyf.Testcases.OnBoardingInhalerTestcases</td>
+<td></td>
+<td>-1735047753</td>
+<td>co.ai4lyf.Testcases.OnBoardingInhalerTestcases@367ffa75</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingMedLogTestcases.setup()'><b>setup</b><br>Test class: co.ai4lyf.Testcases.OnBoardingMedLogTestcases</td>
+<td></td>
+<td>-1735048246</td>
+<td>co.ai4lyf.Testcases.OnBoardingMedLogTestcases@55fe41ea</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingInhalerTestcases.tearDown()'><b>tearDown</b><br>Test class: co.ai4lyf.Testcases.OnBoardingInhalerTestcases</td>
+<td></td>
+<td>-1735047753</td>
+<td>co.ai4lyf.Testcases.OnBoardingInhalerTestcases@367ffa75</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingMedLogTestcases.tearDown()'><b>tearDown</b><br>Test class: co.ai4lyf.Testcases.OnBoardingMedLogTestcases</td>
+<td></td>
+<td>-1735048246</td>
+<td>co.ai4lyf.Testcases.OnBoardingMedLogTestcases@55fe41ea</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingInhalerTestcases.tearDown()'><b>tearDown</b><br>Test class: co.ai4lyf.Testcases.OnBoardingInhalerTestcases</td>
+<td></td>
+<td>-1735047753</td>
+<td>co.ai4lyf.Testcases.OnBoardingInhalerTestcases@367ffa75</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingInhalerTestcases.tearDown()'><b>tearDown</b><br>Test class: co.ai4lyf.Testcases.OnBoardingInhalerTestcases</td>
+<td></td>
+<td>-1735047753</td>
+<td>co.ai4lyf.Testcases.OnBoardingInhalerTestcases@367ffa75</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingInhalerTestcases.tearDown()'><b>tearDown</b><br>Test class: co.ai4lyf.Testcases.OnBoardingInhalerTestcases</td>
+<td></td>
+<td>-1735047753</td>
+<td>co.ai4lyf.Testcases.OnBoardingInhalerTestcases@367ffa75</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingMedLogTestcases.setup()'><b>setup</b><br>Test class: co.ai4lyf.Testcases.OnBoardingMedLogTestcases</td>
+<td></td>
+<td>-1735048246</td>
+<td>co.ai4lyf.Testcases.OnBoardingMedLogTestcases@55fe41ea</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingInhalerTestcases.tearDown()'><b>tearDown</b><br>Test class: co.ai4lyf.Testcases.OnBoardingInhalerTestcases</td>
+<td></td>
+<td>-1735047753</td>
+<td>co.ai4lyf.Testcases.OnBoardingInhalerTestcases@367ffa75</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingMedLogTestcases.tearDown()'><b>tearDown</b><br>Test class: co.ai4lyf.Testcases.OnBoardingMedLogTestcases</td>
+<td></td>
+<td>-1735048246</td>
+<td>co.ai4lyf.Testcases.OnBoardingMedLogTestcases@55fe41ea</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingMedLogTestcases.tearDown()'><b>tearDown</b><br>Test class: co.ai4lyf.Testcases.OnBoardingMedLogTestcases</td>
+<td></td>
+<td>-1735048246</td>
+<td>co.ai4lyf.Testcases.OnBoardingMedLogTestcases@55fe41ea</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingInhalerTestcases.setup()'><b>setup</b><br>Test class: co.ai4lyf.Testcases.OnBoardingInhalerTestcases</td>
+<td></td>
+<td>-1735047753</td>
+<td>co.ai4lyf.Testcases.OnBoardingInhalerTestcases@367ffa75</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingInhalerTestcases.setup()'><b>setup</b><br>Test class: co.ai4lyf.Testcases.OnBoardingInhalerTestcases</td>
+<td></td>
+<td>-1735047753</td>
+<td>co.ai4lyf.Testcases.OnBoardingInhalerTestcases@367ffa75</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='co.ai4lyf.Testcases.SplashTestcases.LogoVerification()'><b>LogoVerification</b><br>Test class: co.ai4lyf.Testcases.SplashTestcases</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.7.1&apos;, java.version: &apos;23&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [2ae38acd-3020-4941-b7e0-25db2c73af67, findElement {using=xpath, value=//android.widget.ImageView[@resource-id=&apos;com.lyf.suite.lyfsuite:id/inhaler&apos;]}]
+Capabilities {appium:appActivity: com.lyf.suite.lyfsuite.lyf_..., appium:appPackage: com.lyf.suite.lyfsuite, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.lyf.suite.lyfsuite.lyf_..., appPackage: com.lyf.suite.lyfsuite, automationName: UiAutomator2, deviceName: Pixel 7, newCommandTimeout: 1800, platformName: ANDROID, platformVersion: 11.0, udid: emulator-5554, uiautomator2ServerInstallTimeout: 180000}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_x86, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 1800, appium:pixelRatio: 2.625, appium:platformVersion: 11, appium:statBarHeight: 136, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:uiautomator2ServerInstallTimeout: 180000, appium:viewportRect: {height: 2264, left: 0, top: 136, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 2ae38acd-3020-4941-b7e0-25db2c73af67
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at co.Ai4Lyf.Objects.SplashObjects.SplashLogo(SplashObjects.java:26)
+	at co.ai4lyf.Testcases.SplashTestcases.LogoVerification(SplashTestcases.java:30)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1521568953", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1521568953'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.7.1&apos;, java.version: &apos;23&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [2ae38acd-3020-4941-b7e0-25db2c73af67, findElement {using=xpath, value=//android.widget.ImageView[@resource-id=&apos;com.lyf.suite.lyfsuite:id/inhaler&apos;]}]
+Capabilities {appium:appActivity: com.lyf.suite.lyfsuite.lyf_..., appium:appPackage: com.lyf.suite.lyfsuite, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.lyf.suite.lyfsuite.lyf_..., appPackage: com.lyf.suite.lyfsuite, automationName: UiAutomator2, deviceName: Pixel 7, newCommandTimeout: 1800, platformName: ANDROID, platformVersion: 11.0, udid: emulator-5554, uiautomator2ServerInstallTimeout: 180000}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_x86, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 1800, appium:pixelRatio: 2.625, appium:platformVersion: 11, appium:statBarHeight: 136, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:uiautomator2ServerInstallTimeout: 180000, appium:viewportRect: {height: 2264, left: 0, top: 136, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 2ae38acd-3020-4941-b7e0-25db2c73af67
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at co.Ai4Lyf.Objects.SplashObjects.SplashLogo(SplashObjects.java:26)
+	at co.ai4lyf.Testcases.SplashTestcases.LogoVerification(SplashTestcases.java:30)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>20</td>
+<td>co.ai4lyf.Testcases.SplashTestcases@2f4948e4</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingHealLyfTestcases.NextTextVerification()'><b>NextTextVerification</b><br>Test class: co.ai4lyf.Testcases.OnBoardingHealLyfTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.OnBoardingHealLyfTestcases@ba2f4ec</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.LoginTestcases.EmailWithDoubleDomain1()'><b>EmailWithDoubleDomain1</b><br>Test class: co.ai4lyf.Testcases.LoginTestcases</td>
+<td></td>
+<td>3</td>
+<td>co.ai4lyf.Testcases.LoginTestcases@1a4013</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.SignUpTestcases.EthnicityLabelVerification()'><b>EthnicityLabelVerification</b><br>Test class: co.ai4lyf.Testcases.SignUpTestcases</td>
+<td></td>
+<td>2</td>
+<td>co.ai4lyf.Testcases.SignUpTestcases@1b6e1eff</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingNutriTestcases.HeadingVerification()'><b>HeadingVerification</b><br>Test class: co.ai4lyf.Testcases.OnBoardingNutriTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.OnBoardingNutriTestcases@1c1bbc4e</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingWaterLogTestcases.WaterLogoVerification()'><b>WaterLogoVerification</b><br>Test class: co.ai4lyf.Testcases.OnBoardingWaterLogTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.OnBoardingWaterLogTestcases@2cd76f31</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingNutriTestcases.ParaText1Verification()'><b>ParaText1Verification</b><br>Test class: co.ai4lyf.Testcases.OnBoardingNutriTestcases</td>
+<td></td>
+<td>0</td>
+<td>co.ai4lyf.Testcases.OnBoardingNutriTestcases@1c1bbc4e</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.LoginTestcases.LyfSuiteLogoVerification()'><b>LyfSuiteLogoVerification</b><br>Test class: co.ai4lyf.Testcases.LoginTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.LoginTestcases@1a4013</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.LoginTestcases.BackLogoClick()'><b>BackLogoClick</b><br>Test class: co.ai4lyf.Testcases.LoginTestcases</td>
+<td></td>
+<td>2</td>
+<td>co.ai4lyf.Testcases.LoginTestcases@1a4013</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.LoginTestcases.EmailWithoutDomain1()'><b>EmailWithoutDomain1</b><br>Test class: co.ai4lyf.Testcases.LoginTestcases</td>
+<td></td>
+<td>3</td>
+<td>co.ai4lyf.Testcases.LoginTestcases@1a4013</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingInhalerTestcases.ParaText1()'><b>ParaText1</b><br>Test class: co.ai4lyf.Testcases.OnBoardingInhalerTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.OnBoardingInhalerTestcases@367ffa75</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.LoginTestcases.GetPrivacyPolicy()'><b>GetPrivacyPolicy</b><br>Test class: co.ai4lyf.Testcases.LoginTestcases</td>
+<td></td>
+<td>3</td>
+<td>co.ai4lyf.Testcases.LoginTestcases@1a4013</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.SignUpTestcases.NameLabelVerification()'><b>NameLabelVerification</b><br>Test class: co.ai4lyf.Testcases.SignUpTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.SignUpTestcases@1b6e1eff</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.SplashTestcases.ParagraphText()'><b>ParagraphText</b><br>Test class: co.ai4lyf.Testcases.SplashTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.SplashTestcases@2f4948e4</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingMedLogTestcases.SkipTextVerification()'><b>SkipTextVerification</b><br>Test class: co.ai4lyf.Testcases.OnBoardingMedLogTestcases</td>
+<td></td>
+<td>0</td>
+<td>co.ai4lyf.Testcases.OnBoardingMedLogTestcases@55fe41ea</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingWaterLogTestcases.HeadText()'><b>HeadText</b><br>Test class: co.ai4lyf.Testcases.OnBoardingWaterLogTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.OnBoardingWaterLogTestcases@2cd76f31</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.SignUpTestcases.NameMinValidation()'><b>NameMinValidation</b><br>Test class: co.ai4lyf.Testcases.SignUpTestcases</td>
+<td></td>
+<td>5</td>
+<td>co.ai4lyf.Testcases.SignUpTestcases@1b6e1eff</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.LoginTestcases.GetTermsConditition()'><b>GetTermsConditition</b><br>Test class: co.ai4lyf.Testcases.LoginTestcases</td>
+<td></td>
+<td>5</td>
+<td>co.ai4lyf.Testcases.LoginTestcases@1a4013</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingCoughTrackerTestcases.ParaText1()'><b>ParaText1</b><br>Test class: co.ai4lyf.Testcases.OnBoardingCoughTrackerTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.OnBoardingCoughTrackerTestcases@49438269</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.SignUpTestcases.EmptyName()'><b>EmptyName</b><br>Test class: co.ai4lyf.Testcases.SignUpTestcases</td>
+<td></td>
+<td>2</td>
+<td>co.ai4lyf.Testcases.SignUpTestcases@1b6e1eff</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingWaterLogTestcases.Skiptext()'><b>Skiptext</b><br>Test class: co.ai4lyf.Testcases.OnBoardingWaterLogTestcases</td>
+<td></td>
+<td>0</td>
+<td>co.ai4lyf.Testcases.OnBoardingWaterLogTestcases@2cd76f31</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingCoughTrackerTestcases.SkipText()'><b>SkipText</b><br>Test class: co.ai4lyf.Testcases.OnBoardingCoughTrackerTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.OnBoardingCoughTrackerTestcases@49438269</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingHealLyfTestcases.SkipTextVerification()'><b>SkipTextVerification</b><br>Test class: co.ai4lyf.Testcases.OnBoardingHealLyfTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.OnBoardingHealLyfTestcases@ba2f4ec</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.LoginTestcases.BackLogoVerification()'><b>BackLogoVerification</b><br>Test class: co.ai4lyf.Testcases.LoginTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.LoginTestcases@1a4013</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.LoginTestcases.EmailWithOutDomain4()'><b>EmailWithOutDomain4</b><br>Test class: co.ai4lyf.Testcases.LoginTestcases</td>
+<td></td>
+<td>2</td>
+<td>co.ai4lyf.Testcases.LoginTestcases@1a4013</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingWaterLogTestcases.Nexttext()'><b>Nexttext</b><br>Test class: co.ai4lyf.Testcases.OnBoardingWaterLogTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.OnBoardingWaterLogTestcases@2cd76f31</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.SignUpTestcases.MedicalConditionInformativeLogoVerification()'><b>MedicalConditionInformativeLogoVerification</b><br>Test class: co.ai4lyf.Testcases.SignUpTestcases</td>
+<td></td>
+<td>2</td>
+<td>co.ai4lyf.Testcases.SignUpTestcases@1b6e1eff</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.SignUpTestcases.SpecialCharaterName()'><b>SpecialCharaterName</b><br>Test class: co.ai4lyf.Testcases.SignUpTestcases</td>
+<td></td>
+<td>6</td>
+<td>co.ai4lyf.Testcases.SignUpTestcases@1b6e1eff</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.SignUpTestcases.NameMaxValidation()'><b>NameMaxValidation</b><br>Test class: co.ai4lyf.Testcases.SignUpTestcases</td>
+<td></td>
+<td>4</td>
+<td>co.ai4lyf.Testcases.SignUpTestcases@1b6e1eff</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.LoginTestcases.EmailWithDoubleDomain2()'><b>EmailWithDoubleDomain2</b><br>Test class: co.ai4lyf.Testcases.LoginTestcases</td>
+<td></td>
+<td>5</td>
+<td>co.ai4lyf.Testcases.LoginTestcases@1a4013</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.LoginTestcases.EmailWithPlus()'><b>EmailWithPlus</b><br>Test class: co.ai4lyf.Testcases.LoginTestcases</td>
+<td></td>
+<td>5</td>
+<td>co.ai4lyf.Testcases.LoginTestcases@1a4013</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.WelComeTestcases.GetContinueBtn()'><b>GetContinueBtn</b><br>Test class: co.ai4lyf.Testcases.WelComeTestcases</td>
+<td></td>
+<td>4</td>
+<td>co.ai4lyf.Testcases.WelComeTestcases@40005471</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.LoginTestcases.EmailWithOutDomain5()'><b>EmailWithOutDomain5</b><br>Test class: co.ai4lyf.Testcases.LoginTestcases</td>
+<td></td>
+<td>3</td>
+<td>co.ai4lyf.Testcases.LoginTestcases@1a4013</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingInhalerTestcases.LogoVerification()'><b>LogoVerification</b><br>Test class: co.ai4lyf.Testcases.OnBoardingInhalerTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.OnBoardingInhalerTestcases@367ffa75</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.LoginTestcases.VerifyEmailLabelText()'><b>VerifyEmailLabelText</b><br>Test class: co.ai4lyf.Testcases.LoginTestcases</td>
+<td></td>
+<td>0</td>
+<td>co.ai4lyf.Testcases.LoginTestcases@1a4013</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.SignUpTestcases.HeadingVerification()'><b>HeadingVerification</b><br>Test class: co.ai4lyf.Testcases.SignUpTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.SignUpTestcases@1b6e1eff</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingCoughTrackerTestcases.HeadText()'><b>HeadText</b><br>Test class: co.ai4lyf.Testcases.OnBoardingCoughTrackerTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.OnBoardingCoughTrackerTestcases@49438269</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.SplashTestcases.HeadText()'><b>HeadText</b><br>Test class: co.ai4lyf.Testcases.SplashTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.SplashTestcases@2f4948e4</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingHealLyfTestcases.HeadingVerification()'><b>HeadingVerification</b><br>Test class: co.ai4lyf.Testcases.OnBoardingHealLyfTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.OnBoardingHealLyfTestcases@ba2f4ec</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingNutriTestcases.NextTextVerification()'><b>NextTextVerification</b><br>Test class: co.ai4lyf.Testcases.OnBoardingNutriTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.OnBoardingNutriTestcases@1c1bbc4e</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.LoginTestcases.EmailWithDomain1()'><b>EmailWithDomain1</b><br>Test class: co.ai4lyf.Testcases.LoginTestcases</td>
+<td></td>
+<td>3</td>
+<td>co.ai4lyf.Testcases.LoginTestcases@1a4013</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.SignUpTestcases.MedicalConditionPlaceHolderVerification()'><b>MedicalConditionPlaceHolderVerification</b><br>Test class: co.ai4lyf.Testcases.SignUpTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.SignUpTestcases@1b6e1eff</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingWaterLogTestcases.ClickNext()'><b>ClickNext</b><br>Test class: co.ai4lyf.Testcases.OnBoardingWaterLogTestcases</td>
+<td></td>
+<td>2</td>
+<td>co.ai4lyf.Testcases.OnBoardingWaterLogTestcases@2cd76f31</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.LoginTestcases.EmptyEmail()'><b>EmptyEmail</b><br>Test class: co.ai4lyf.Testcases.LoginTestcases</td>
+<td></td>
+<td>2</td>
+<td>co.ai4lyf.Testcases.LoginTestcases@1a4013</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingNutriTestcases.ParaText2Verification()'><b>ParaText2Verification</b><br>Test class: co.ai4lyf.Testcases.OnBoardingNutriTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.OnBoardingNutriTestcases@1c1bbc4e</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingHealLyfTestcases.ClickNext()'><b>ClickNext</b><br>Test class: co.ai4lyf.Testcases.OnBoardingHealLyfTestcases</td>
+<td></td>
+<td>2</td>
+<td>co.ai4lyf.Testcases.OnBoardingHealLyfTestcases@ba2f4ec</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingMedLogTestcases.HeadingVerification()'><b>HeadingVerification</b><br>Test class: co.ai4lyf.Testcases.OnBoardingMedLogTestcases</td>
+<td></td>
+<td>0</td>
+<td>co.ai4lyf.Testcases.OnBoardingMedLogTestcases@55fe41ea</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingHealLyfTestcases.ClickSkip()'><b>ClickSkip</b><br>Test class: co.ai4lyf.Testcases.OnBoardingHealLyfTestcases</td>
+<td></td>
+<td>2</td>
+<td>co.ai4lyf.Testcases.OnBoardingHealLyfTestcases@ba2f4ec</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingMedLogTestcases.GetParaText2()'><b>GetParaText2</b><br>Test class: co.ai4lyf.Testcases.OnBoardingMedLogTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.OnBoardingMedLogTestcases@55fe41ea</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.WelComeTestcases.ParagraphText()'><b>ParagraphText</b><br>Test class: co.ai4lyf.Testcases.WelComeTestcases</td>
+<td></td>
+<td>4</td>
+<td>co.ai4lyf.Testcases.WelComeTestcases@40005471</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingMedLogTestcases.GetParaText1()'><b>GetParaText1</b><br>Test class: co.ai4lyf.Testcases.OnBoardingMedLogTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.OnBoardingMedLogTestcases@55fe41ea</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingCoughTrackerTestcases.NextText()'><b>NextText</b><br>Test class: co.ai4lyf.Testcases.OnBoardingCoughTrackerTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.OnBoardingCoughTrackerTestcases@49438269</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingNutriTestcases.SkipTextVerification()'><b>SkipTextVerification</b><br>Test class: co.ai4lyf.Testcases.OnBoardingNutriTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.OnBoardingNutriTestcases@1c1bbc4e</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingNutriTestcases.ClickNext()'><b>ClickNext</b><br>Test class: co.ai4lyf.Testcases.OnBoardingNutriTestcases</td>
+<td></td>
+<td>2</td>
+<td>co.ai4lyf.Testcases.OnBoardingNutriTestcases@1c1bbc4e</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.WelComeTestcases.LogoVerification()'><b>LogoVerification</b><br>Test class: co.ai4lyf.Testcases.WelComeTestcases</td>
+<td></td>
+<td>0</td>
+<td>co.ai4lyf.Testcases.WelComeTestcases@40005471</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.LoginTestcases.ValidEmail()'><b>ValidEmail</b><br>Test class: co.ai4lyf.Testcases.LoginTestcases</td>
+<td></td>
+<td>13</td>
+<td>co.ai4lyf.Testcases.LoginTestcases@1a4013</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingWaterLogTestcases.ClickSkip()'><b>ClickSkip</b><br>Test class: co.ai4lyf.Testcases.OnBoardingWaterLogTestcases</td>
+<td></td>
+<td>5</td>
+<td>co.ai4lyf.Testcases.OnBoardingWaterLogTestcases@2cd76f31</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.LoginTestcases.VerifyEmailPlaceHolderText()'><b>VerifyEmailPlaceHolderText</b><br>Test class: co.ai4lyf.Testcases.LoginTestcases</td>
+<td></td>
+<td>2</td>
+<td>co.ai4lyf.Testcases.LoginTestcases@1a4013</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingCoughTrackerTestcases.ClickNextText()'><b>ClickNextText</b><br>Test class: co.ai4lyf.Testcases.OnBoardingCoughTrackerTestcases</td>
+<td></td>
+<td>2</td>
+<td>co.ai4lyf.Testcases.OnBoardingCoughTrackerTestcases@49438269</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.LoginTestcases.EmailWithoutDomain2()'><b>EmailWithoutDomain2</b><br>Test class: co.ai4lyf.Testcases.LoginTestcases</td>
+<td></td>
+<td>4</td>
+<td>co.ai4lyf.Testcases.LoginTestcases@1a4013</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.SignUpTestcases.EnterName()'><b>EnterName</b><br>Test class: co.ai4lyf.Testcases.SignUpTestcases</td>
+<td></td>
+<td>5</td>
+<td>co.ai4lyf.Testcases.SignUpTestcases@1b6e1eff</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.LoginTestcases.EmailWithSpecialch2()'><b>EmailWithSpecialch2</b><br>Test class: co.ai4lyf.Testcases.LoginTestcases</td>
+<td></td>
+<td>3</td>
+<td>co.ai4lyf.Testcases.LoginTestcases@1a4013</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.LoginTestcases.EmailWithServer()'><b>EmailWithServer</b><br>Test class: co.ai4lyf.Testcases.LoginTestcases</td>
+<td></td>
+<td>4</td>
+<td>co.ai4lyf.Testcases.LoginTestcases@1a4013</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingHealLyfTestcases.LogoVerification()'><b>LogoVerification</b><br>Test class: co.ai4lyf.Testcases.OnBoardingHealLyfTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.OnBoardingHealLyfTestcases@ba2f4ec</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.SignUpTestcases.EthnicityPlaceHolderVerification()'><b>EthnicityPlaceHolderVerification</b><br>Test class: co.ai4lyf.Testcases.SignUpTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.SignUpTestcases@1b6e1eff</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.SignUpTestcases.MedicalConditionLabelVerification()'><b>MedicalConditionLabelVerification</b><br>Test class: co.ai4lyf.Testcases.SignUpTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.SignUpTestcases@1b6e1eff</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.LoginTestcases.EmailWithoutDomain3()'><b>EmailWithoutDomain3</b><br>Test class: co.ai4lyf.Testcases.LoginTestcases</td>
+<td></td>
+<td>3</td>
+<td>co.ai4lyf.Testcases.LoginTestcases@1a4013</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingCoughTrackerTestcases.ParaText2()'><b>ParaText2</b><br>Test class: co.ai4lyf.Testcases.OnBoardingCoughTrackerTestcases</td>
+<td></td>
+<td>0</td>
+<td>co.ai4lyf.Testcases.OnBoardingCoughTrackerTestcases@49438269</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.LoginTestcases.EmailWithSpecialch1()'><b>EmailWithSpecialch1</b><br>Test class: co.ai4lyf.Testcases.LoginTestcases</td>
+<td></td>
+<td>6</td>
+<td>co.ai4lyf.Testcases.LoginTestcases@1a4013</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingCoughTrackerTestcases.LogoVerification()'><b>LogoVerification</b><br>Test class: co.ai4lyf.Testcases.OnBoardingCoughTrackerTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.OnBoardingCoughTrackerTestcases@49438269</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingHealLyfTestcases.ParaVerification()'><b>ParaVerification</b><br>Test class: co.ai4lyf.Testcases.OnBoardingHealLyfTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.OnBoardingHealLyfTestcases@ba2f4ec</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.LoginTestcases.VerifyParaText()'><b>VerifyParaText</b><br>Test class: co.ai4lyf.Testcases.LoginTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.LoginTestcases@1a4013</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.WelComeTestcases.HeadText()'><b>HeadText</b><br>Test class: co.ai4lyf.Testcases.WelComeTestcases</td>
+<td></td>
+<td>2</td>
+<td>co.ai4lyf.Testcases.WelComeTestcases@40005471</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.SignUpTestcases.NamePlaceHolderVerification()'><b>NamePlaceHolderVerification</b><br>Test class: co.ai4lyf.Testcases.SignUpTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.SignUpTestcases@1b6e1eff</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingWaterLogTestcases.ParaText2()'><b>ParaText2</b><br>Test class: co.ai4lyf.Testcases.OnBoardingWaterLogTestcases</td>
+<td></td>
+<td>0</td>
+<td>co.ai4lyf.Testcases.OnBoardingWaterLogTestcases@2cd76f31</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingInhalerTestcases.HeadText()'><b>HeadText</b><br>Test class: co.ai4lyf.Testcases.OnBoardingInhalerTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.OnBoardingInhalerTestcases@367ffa75</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.SignUpTestcases.EthnicityInformativeLogoVerification()'><b>EthnicityInformativeLogoVerification</b><br>Test class: co.ai4lyf.Testcases.SignUpTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.SignUpTestcases@1b6e1eff</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingMedLogTestcases.LogoVerification()'><b>LogoVerification</b><br>Test class: co.ai4lyf.Testcases.OnBoardingMedLogTestcases</td>
+<td></td>
+<td>0</td>
+<td>co.ai4lyf.Testcases.OnBoardingMedLogTestcases@55fe41ea</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingWaterLogTestcases.ParaText1()'><b>ParaText1</b><br>Test class: co.ai4lyf.Testcases.OnBoardingWaterLogTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.OnBoardingWaterLogTestcases@2cd76f31</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.LoginTestcases.BottomTextVerification()'><b>BottomTextVerification</b><br>Test class: co.ai4lyf.Testcases.LoginTestcases</td>
+<td></td>
+<td>2</td>
+<td>co.ai4lyf.Testcases.LoginTestcases@1a4013</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.SignUpTestcases.NumericName()'><b>NumericName</b><br>Test class: co.ai4lyf.Testcases.SignUpTestcases</td>
+<td></td>
+<td>5</td>
+<td>co.ai4lyf.Testcases.SignUpTestcases@1b6e1eff</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingNutriTestcases.ClickSkip()'><b>ClickSkip</b><br>Test class: co.ai4lyf.Testcases.OnBoardingNutriTestcases</td>
+<td></td>
+<td>2</td>
+<td>co.ai4lyf.Testcases.OnBoardingNutriTestcases@1c1bbc4e</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.LoginTestcases.VerifyHeadingText()'><b>VerifyHeadingText</b><br>Test class: co.ai4lyf.Testcases.LoginTestcases</td>
+<td></td>
+<td>0</td>
+<td>co.ai4lyf.Testcases.LoginTestcases@1a4013</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingCoughTrackerTestcases.ClickSkipText()'><b>ClickSkipText</b><br>Test class: co.ai4lyf.Testcases.OnBoardingCoughTrackerTestcases</td>
+<td></td>
+<td>2</td>
+<td>co.ai4lyf.Testcases.OnBoardingCoughTrackerTestcases@49438269</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingNutriTestcases.LogoVerification()'><b>LogoVerification</b><br>Test class: co.ai4lyf.Testcases.OnBoardingNutriTestcases</td>
+<td></td>
+<td>1</td>
+<td>co.ai4lyf.Testcases.OnBoardingNutriTestcases@1c1bbc4e</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.LoginTestcases.EmailWithOutDomain6()'><b>EmailWithOutDomain6</b><br>Test class: co.ai4lyf.Testcases.LoginTestcases</td>
+<td></td>
+<td>7</td>
+<td>co.ai4lyf.Testcases.LoginTestcases@1a4013</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingMedLogTestcases.NextTextVerification()'><b>NextTextVerification</b><br>Test class: co.ai4lyf.Testcases.OnBoardingMedLogTestcases</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at co.Ai4Lyf.Objects.WelcomeScreenObjects.ClickContinueBtn(WelcomeScreenObjects.java:60)
+	at co.ai4lyf.Testcases.OnBoardingMedLogTestcases.setup(OnBoardingMedLogTestcases.java:43)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1077739292", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1077739292'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at co.Ai4Lyf.Objects.WelcomeScreenObjects.ClickContinueBtn(WelcomeScreenObjects.java:60)
+	at co.ai4lyf.Testcases.OnBoardingMedLogTestcases.setup(OnBoardingMedLogTestcases.java:43)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>co.ai4lyf.Testcases.OnBoardingMedLogTestcases@55fe41ea</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingInhalerTestcases.ParaText2()'><b>ParaText2</b><br>Test class: co.ai4lyf.Testcases.OnBoardingInhalerTestcases</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at co.Ai4Lyf.Objects.WelcomeScreenObjects.ClickContinueBtn(WelcomeScreenObjects.java:60)
+	at co.ai4lyf.Testcases.OnBoardingInhalerTestcases.setup(OnBoardingInhalerTestcases.java:36)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1392482765", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1392482765'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at co.Ai4Lyf.Objects.WelcomeScreenObjects.ClickContinueBtn(WelcomeScreenObjects.java:60)
+	at co.ai4lyf.Testcases.OnBoardingInhalerTestcases.setup(OnBoardingInhalerTestcases.java:36)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>co.ai4lyf.Testcases.OnBoardingInhalerTestcases@367ffa75</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingMedLogTestcases.ClickSkip()'><b>ClickSkip</b><br>Test class: co.ai4lyf.Testcases.OnBoardingMedLogTestcases</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at co.Ai4Lyf.Objects.WelcomeScreenObjects.ClickContinueBtn(WelcomeScreenObjects.java:60)
+	at co.ai4lyf.Testcases.OnBoardingMedLogTestcases.setup(OnBoardingMedLogTestcases.java:43)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1911860918", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1911860918'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at co.Ai4Lyf.Objects.WelcomeScreenObjects.ClickContinueBtn(WelcomeScreenObjects.java:60)
+	at co.ai4lyf.Testcases.OnBoardingMedLogTestcases.setup(OnBoardingMedLogTestcases.java:43)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>co.ai4lyf.Testcases.OnBoardingMedLogTestcases@55fe41ea</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingInhalerTestcases.SkipText()'><b>SkipText</b><br>Test class: co.ai4lyf.Testcases.OnBoardingInhalerTestcases</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at co.Ai4Lyf.Objects.WelcomeScreenObjects.ClickContinueBtn(WelcomeScreenObjects.java:60)
+	at co.ai4lyf.Testcases.OnBoardingInhalerTestcases.setup(OnBoardingInhalerTestcases.java:36)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2070372626", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2070372626'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at co.Ai4Lyf.Objects.WelcomeScreenObjects.ClickContinueBtn(WelcomeScreenObjects.java:60)
+	at co.ai4lyf.Testcases.OnBoardingInhalerTestcases.setup(OnBoardingInhalerTestcases.java:36)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>co.ai4lyf.Testcases.OnBoardingInhalerTestcases@367ffa75</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingMedLogTestcases.ClickNext()'><b>ClickNext</b><br>Test class: co.ai4lyf.Testcases.OnBoardingMedLogTestcases</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at co.Ai4Lyf.Objects.WelcomeScreenObjects.ClickContinueBtn(WelcomeScreenObjects.java:60)
+	at co.ai4lyf.Testcases.OnBoardingMedLogTestcases.setup(OnBoardingMedLogTestcases.java:43)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1527084496", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1527084496'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at co.Ai4Lyf.Objects.WelcomeScreenObjects.ClickContinueBtn(WelcomeScreenObjects.java:60)
+	at co.ai4lyf.Testcases.OnBoardingMedLogTestcases.setup(OnBoardingMedLogTestcases.java:43)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>co.ai4lyf.Testcases.OnBoardingMedLogTestcases@55fe41ea</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingInhalerTestcases.NextText()'><b>NextText</b><br>Test class: co.ai4lyf.Testcases.OnBoardingInhalerTestcases</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at co.Ai4Lyf.Objects.WelcomeScreenObjects.ClickContinueBtn(WelcomeScreenObjects.java:60)
+	at co.ai4lyf.Testcases.OnBoardingInhalerTestcases.setup(OnBoardingInhalerTestcases.java:36)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace325674467", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace325674467'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at co.Ai4Lyf.Objects.WelcomeScreenObjects.ClickContinueBtn(WelcomeScreenObjects.java:60)
+	at co.ai4lyf.Testcases.OnBoardingInhalerTestcases.setup(OnBoardingInhalerTestcases.java:36)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>co.ai4lyf.Testcases.OnBoardingInhalerTestcases@367ffa75</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingInhalerTestcases.ClickSkipText()'><b>ClickSkipText</b><br>Test class: co.ai4lyf.Testcases.OnBoardingInhalerTestcases</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at co.Ai4Lyf.Objects.WelcomeScreenObjects.ClickContinueBtn(WelcomeScreenObjects.java:60)
+	at co.ai4lyf.Testcases.OnBoardingInhalerTestcases.setup(OnBoardingInhalerTestcases.java:36)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1130656047", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1130656047'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at co.Ai4Lyf.Objects.WelcomeScreenObjects.ClickContinueBtn(WelcomeScreenObjects.java:60)
+	at co.ai4lyf.Testcases.OnBoardingInhalerTestcases.setup(OnBoardingInhalerTestcases.java:36)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>co.ai4lyf.Testcases.OnBoardingInhalerTestcases@367ffa75</td></tr>
+<tr>
+<td title='co.ai4lyf.Testcases.OnBoardingInhalerTestcases.ClickNextText()'><b>ClickNextText</b><br>Test class: co.ai4lyf.Testcases.OnBoardingInhalerTestcases</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at co.Ai4Lyf.Objects.WelcomeScreenObjects.ClickContinueBtn(WelcomeScreenObjects.java:60)
+	at co.ai4lyf.Testcases.OnBoardingInhalerTestcases.setup(OnBoardingInhalerTestcases.java:36)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1523957322", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1523957322'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at co.Ai4Lyf.Objects.WelcomeScreenObjects.ClickContinueBtn(WelcomeScreenObjects.java:60)
+	at co.ai4lyf.Testcases.OnBoardingInhalerTestcases.setup(OnBoardingInhalerTestcases.java:36)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>co.ai4lyf.Testcases.OnBoardingInhalerTestcases@367ffa75</td></tr>
+</table><p>
+</body>
+</html>

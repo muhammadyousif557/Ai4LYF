@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Ai4Lyf">
+
+
+
+	<listeners>
+    <listener class-name="co.Ai4Lyf.ExtentReportListener.ExtentReportListener"/>
+	</listeners>
+	
+	<test name="Regression Testing 1.0">
+		<classes>
+			<class name="co.ai4lyf.Testcases.SplashTestcases"></class>
+			<class name="co.ai4lyf.Testcases.WelComeTestcases"></class>
+			<class name="co.ai4lyf.Testcases.OnBoardingWaterLogTestcases"></class>
+			<class name="co.ai4lyf.Testcases.OnBoardingInhalerTestcases"></class>
+			<class name="co.ai4lyf.Testcases.OnBoardingCoughTrackerTestcases"></class>
+			<class name="co.ai4lyf.Testcases.OnBoardingHealLyfTestcases"></class>
+			<class name="co.ai4lyf.Testcases.OnBoardingNutriTestcases"></class>
+			<class name="co.ai4lyf.Testcases.OnBoardingMedLogTestcases"></class>
+			<class name="co.ai4lyf.Testcases.LoginTestcases"></class> 
+			<class name="co.ai4lyf.Testcases.SignUpTestcases"></class>
+		</classes>
+	</test>
+</suite>
